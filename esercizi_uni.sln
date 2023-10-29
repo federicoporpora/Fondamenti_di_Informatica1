@@ -61,6 +61,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10_inversione_cifre", "06-F
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11_inversione_caratteri", "06-Funzioni-FunzRic-Header\11_inversione_caratteri\11_inversione_caratteri.vcxproj", "{D10B75AE-0E39-4E1B-8E13-9BE5D5594421}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12_calcolo_MCD", "06-Funzioni-FunzRic-Header\12_calcolo_MCD\12_calcolo_MCD.vcxproj", "{C026189B-1AC7-4701-92FB-400F3FC11F32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -277,6 +279,14 @@ Global
 		{D10B75AE-0E39-4E1B-8E13-9BE5D5594421}.Release|x64.Build.0 = Release|x64
 		{D10B75AE-0E39-4E1B-8E13-9BE5D5594421}.Release|x86.ActiveCfg = Release|Win32
 		{D10B75AE-0E39-4E1B-8E13-9BE5D5594421}.Release|x86.Build.0 = Release|Win32
+		{C026189B-1AC7-4701-92FB-400F3FC11F32}.Debug|x64.ActiveCfg = Debug|x64
+		{C026189B-1AC7-4701-92FB-400F3FC11F32}.Debug|x64.Build.0 = Debug|x64
+		{C026189B-1AC7-4701-92FB-400F3FC11F32}.Debug|x86.ActiveCfg = Debug|Win32
+		{C026189B-1AC7-4701-92FB-400F3FC11F32}.Debug|x86.Build.0 = Debug|Win32
+		{C026189B-1AC7-4701-92FB-400F3FC11F32}.Release|x64.ActiveCfg = Release|x64
+		{C026189B-1AC7-4701-92FB-400F3FC11F32}.Release|x64.Build.0 = Release|x64
+		{C026189B-1AC7-4701-92FB-400F3FC11F32}.Release|x86.ActiveCfg = Release|Win32
+		{C026189B-1AC7-4701-92FB-400F3FC11F32}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -307,6 +317,7 @@ Global
 		{82FFCB8E-9457-4E8C-BC84-23A91B449C6E} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
 		{7D502F1B-8D3C-47AF-8BEC-252AF09DF175} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
 		{D10B75AE-0E39-4E1B-8E13-9BE5D5594421} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
+		{C026189B-1AC7-4701-92FB-400F3FC11F32} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D4FB4E4-A4A1-471A-80D3-D5BC8820BE7F}
