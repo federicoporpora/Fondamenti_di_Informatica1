@@ -13,7 +13,7 @@ int invert();
 int main() {
     
     printf("Inserire una serie di caratteri, stampero' i caratteri invertiti di posizione ed il numero di caratteri. ");
-    printf(" %d", invert());
+    printf(" %d", (invert() - 1));
 
     return 0;
 
@@ -21,7 +21,7 @@ int main() {
 
 int invert() {
     char carattere = getchar();
-    int i = 0;
+    int i = 1;
     if (carattere != '\n' && carattere != EOF) {
         i += invert();
         putchar(carattere);
