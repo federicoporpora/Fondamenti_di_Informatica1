@@ -65,6 +65,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12_calcolo_MCD", "06-Funzio
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_calcolo_minimo_massimo", "06-Funzioni-FunzRic-Header\13_calcolo_minimo_massimo\13_calcolo_minimo_massimo.vcxproj", "{EACD32D5-AF74-4462-AA7C-D1BCF5D67F44}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14_mcm", "06-Funzioni-FunzRic-Header\14_mcm\14_mcm.vcxproj", "{6D0331BF-E263-49B2-BEDB-B9828727B510}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -297,6 +299,14 @@ Global
 		{EACD32D5-AF74-4462-AA7C-D1BCF5D67F44}.Release|x64.Build.0 = Release|x64
 		{EACD32D5-AF74-4462-AA7C-D1BCF5D67F44}.Release|x86.ActiveCfg = Release|Win32
 		{EACD32D5-AF74-4462-AA7C-D1BCF5D67F44}.Release|x86.Build.0 = Release|Win32
+		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Debug|x64.ActiveCfg = Debug|x64
+		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Debug|x64.Build.0 = Debug|x64
+		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Debug|x86.ActiveCfg = Debug|Win32
+		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Debug|x86.Build.0 = Debug|Win32
+		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Release|x64.ActiveCfg = Release|x64
+		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Release|x64.Build.0 = Release|x64
+		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Release|x86.ActiveCfg = Release|Win32
+		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -329,6 +339,7 @@ Global
 		{D10B75AE-0E39-4E1B-8E13-9BE5D5594421} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
 		{C026189B-1AC7-4701-92FB-400F3FC11F32} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
 		{EACD32D5-AF74-4462-AA7C-D1BCF5D67F44} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
+		{6D0331BF-E263-49B2-BEDB-B9828727B510} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D4FB4E4-A4A1-471A-80D3-D5BC8820BE7F}
