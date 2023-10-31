@@ -67,6 +67,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_calcolo_minimo_massimo",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14_mcm", "06-Funzioni-FunzRic-Header\14_mcm\14_mcm.vcxproj", "{6D0331BF-E263-49B2-BEDB-B9828727B510}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A4245003-5C3B-41AA-87A1-8FE8CBEEF1D5}"
+	ProjectSection(SolutionItems) = preProject
+		myMath.c = myMath.c
+		myMath.h = myMath.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

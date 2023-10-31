@@ -9,19 +9,3 @@ int mioMax(int a, int b) {
 	max = (a > b) ? a : b;
 	return max;
 }
-
-int MCD(int a, int b) {
-	if (a == b) {
-		return a;
-	}
-	else if (a > b) {
-		MCD(a - b, b);
-	}
-	else {
-		MCD(a, b - a);
-	}
-}
-
-int mcm(int a, int b) {
-	return (a * b) / MCD(a, b);
-}
