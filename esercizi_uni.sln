@@ -73,6 +73,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		myMath.h = myMath.h
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "15_triangolo_di_tartaglia", "06-Funzioni-FunzRic-Header\15_triangolo_di_tartaglia\15_triangolo_di_tartaglia.vcxproj", "{776D8358-6217-4CEF-8D58-3726A5C77115}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -313,6 +315,14 @@ Global
 		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Release|x64.Build.0 = Release|x64
 		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Release|x86.ActiveCfg = Release|Win32
 		{6D0331BF-E263-49B2-BEDB-B9828727B510}.Release|x86.Build.0 = Release|Win32
+		{776D8358-6217-4CEF-8D58-3726A5C77115}.Debug|x64.ActiveCfg = Debug|x64
+		{776D8358-6217-4CEF-8D58-3726A5C77115}.Debug|x64.Build.0 = Debug|x64
+		{776D8358-6217-4CEF-8D58-3726A5C77115}.Debug|x86.ActiveCfg = Debug|Win32
+		{776D8358-6217-4CEF-8D58-3726A5C77115}.Debug|x86.Build.0 = Debug|Win32
+		{776D8358-6217-4CEF-8D58-3726A5C77115}.Release|x64.ActiveCfg = Release|x64
+		{776D8358-6217-4CEF-8D58-3726A5C77115}.Release|x64.Build.0 = Release|x64
+		{776D8358-6217-4CEF-8D58-3726A5C77115}.Release|x86.ActiveCfg = Release|Win32
+		{776D8358-6217-4CEF-8D58-3726A5C77115}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -346,6 +356,7 @@ Global
 		{C026189B-1AC7-4701-92FB-400F3FC11F32} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
 		{EACD32D5-AF74-4462-AA7C-D1BCF5D67F44} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
 		{6D0331BF-E263-49B2-BEDB-B9828727B510} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
+		{776D8358-6217-4CEF-8D58-3726A5C77115} = {830103AE-9AE4-4D0C-9141-C4574781DFE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D4FB4E4-A4A1-471A-80D3-D5BC8820BE7F}
