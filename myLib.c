@@ -1,3 +1,6 @@
+#include <math.h>
+#include "myMath.h"
+
 int mioMin(int a, int b) {
 	int min;
 	min = (a < b) ? a : b;
@@ -40,4 +43,23 @@ int fattoriale(int a) {
 
 int coeff_bin(int n, int k) {
 	return fattoriale(n) / (fattoriale(k) * fattoriale(n - k));
+}
+
+double myLog(int a, int b) {
+	return log(b) / log(a);
+}
+
+int sum_under(int a) {
+	if (a <= 0) {
+		return 0;
+	}
+	else {
+		return a + sum_under(a - 1);
+	}
+}
+
+void swap(int* a, int* b) {
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }

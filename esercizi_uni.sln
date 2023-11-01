@@ -69,11 +69,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14_mcm", "06-Funzioni-FunzR
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A4245003-5C3B-41AA-87A1-8FE8CBEEF1D5}"
 	ProjectSection(SolutionItems) = preProject
-		myMath.c = myMath.c
-		myMath.h = myMath.h
+		myLib.c = myLib.c
+		myLib.h = myLib.h
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "15_triangolo_di_tartaglia", "06-Funzioni-FunzRic-Header\15_triangolo_di_tartaglia\15_triangolo_di_tartaglia.vcxproj", "{776D8358-6217-4CEF-8D58-3726A5C77115}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "prova", "prova\prova.vcxproj", "{28EAA81C-A3F0-4D7B-9F52-8901B1CE30B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -323,6 +325,14 @@ Global
 		{776D8358-6217-4CEF-8D58-3726A5C77115}.Release|x64.Build.0 = Release|x64
 		{776D8358-6217-4CEF-8D58-3726A5C77115}.Release|x86.ActiveCfg = Release|Win32
 		{776D8358-6217-4CEF-8D58-3726A5C77115}.Release|x86.Build.0 = Release|Win32
+		{28EAA81C-A3F0-4D7B-9F52-8901B1CE30B5}.Debug|x64.ActiveCfg = Debug|x64
+		{28EAA81C-A3F0-4D7B-9F52-8901B1CE30B5}.Debug|x64.Build.0 = Debug|x64
+		{28EAA81C-A3F0-4D7B-9F52-8901B1CE30B5}.Debug|x86.ActiveCfg = Debug|Win32
+		{28EAA81C-A3F0-4D7B-9F52-8901B1CE30B5}.Debug|x86.Build.0 = Debug|Win32
+		{28EAA81C-A3F0-4D7B-9F52-8901B1CE30B5}.Release|x64.ActiveCfg = Release|x64
+		{28EAA81C-A3F0-4D7B-9F52-8901B1CE30B5}.Release|x64.Build.0 = Release|x64
+		{28EAA81C-A3F0-4D7B-9F52-8901B1CE30B5}.Release|x86.ActiveCfg = Release|Win32
+		{28EAA81C-A3F0-4D7B-9F52-8901B1CE30B5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
