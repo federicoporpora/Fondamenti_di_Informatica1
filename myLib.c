@@ -45,7 +45,7 @@ int coeff_bin(int n, int k) {
 	return fattoriale(n) / (fattoriale(k) * fattoriale(n - k));
 }
 
-double myLog(int a, int b) {
+double myLog(double a, double b) {
 	return log(b) / log(a);
 }
 
@@ -58,7 +58,7 @@ int sum_under(int a) {
 	}
 }
 
-void swap(int* a, int* b) {
+void swap_and_commerciale(int *a, int *b) {
 	int temp = *a;
 	*a = *b;
 	*b = temp;
