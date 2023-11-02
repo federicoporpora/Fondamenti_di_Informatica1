@@ -1,19 +1,19 @@
 #include <math.h>
 #include "myMath.h"
 
-int mioMin(int a, int b) {
+int myMin(int a, int b) {
 	int min;
 	min = (a < b) ? a : b;
 	return min;
 }
 
-int mioMax(int a, int b) {
+int myMax(int a, int b) {
 	int max;
 	max = (a > b) ? a : b;
 	return max;
 }
 
-int MCD(int a, int b) {
+int myMCD(int a, int b) {
 	if (a == b) {
 		return a;
 	}
@@ -25,11 +25,11 @@ int MCD(int a, int b) {
 	}
 }
 
-int mcm(int a, int b) {
+int myMcm(int a, int b) {
 	return (a * b) / MCD(a, b);
 }
 
-int fattoriale(int a) {
+int myFattoriale(int a) {
 	if (a < 0) {
 		return 0;
 	}
@@ -49,7 +49,7 @@ int myPow(int a, int b) {
 	return result;
 }
 
-int coeff_bin(int n, int k) {
+int myCoeffBin(int n, int k) {
 	return fattoriale(n) / (fattoriale(k) * fattoriale(n - k));
 }
 
@@ -57,7 +57,7 @@ double myLog(double a, double b) {
 	return log(b) / log(a);
 }
 
-int sum_under(int a) {
+int mySum(int a) {
 	if (a <= 0) {
 		return 0;
 	}
@@ -66,7 +66,7 @@ int sum_under(int a) {
 	}
 }
 
-void swap_and_commerciale(int *a, int *b) {
+void mySwap(int *a, int *b) {
 	int temp = *a;
 	*a = *b;
 	*b = temp;
