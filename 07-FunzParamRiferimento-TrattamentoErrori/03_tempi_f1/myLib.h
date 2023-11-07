@@ -1,0 +1,1 @@
+void ms_to_norm(int ms_i, int* min, int* sec, int* ms_f);
