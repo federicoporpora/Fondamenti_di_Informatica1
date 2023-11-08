@@ -1,0 +1,1 @@
+double mediaRic(double sum, int n);

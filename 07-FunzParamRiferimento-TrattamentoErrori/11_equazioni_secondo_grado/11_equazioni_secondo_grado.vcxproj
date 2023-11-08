@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6d9759c4-8e36-4f1c-860a-3e8f05e3d99d}</ProjectGuid>
-    <RootNamespace>My05areaeperimetrotriangolo</RootNamespace>
+    <ProjectGuid>{b5b9e82b-f9b8-4cb0-950d-57786d7eb4d1}</ProjectGuid>
+    <RootNamespace>My11equazionisecondogrado</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

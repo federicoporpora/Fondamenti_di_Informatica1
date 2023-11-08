@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6d9759c4-8e36-4f1c-860a-3e8f05e3d99d}</ProjectGuid>
-    <RootNamespace>My05areaeperimetrotriangolo</RootNamespace>
+    <ProjectGuid>{2870e6a2-2463-453e-b490-a1d0061e2001}</ProjectGuid>
+    <RootNamespace>My08calcolomedia</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

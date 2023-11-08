@@ -1,0 +1,1 @@
+int secondoGrado(double a, double b, double c, double* sol1, double* sol2);
