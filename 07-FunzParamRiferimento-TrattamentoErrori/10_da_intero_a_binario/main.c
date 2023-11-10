@@ -7,10 +7,19 @@
 
 #include <stdio.h>
 
+void convertiBin(int bin);
+
 int main() {
 
-
+    convertiBin(1023);
 
     return 0;
 
+}
+
+void convertiBin(int bin) {
+    if (bin != 0) {
+        convertiBin(bin / 2);
+        printf("%d", bin % 2);
+    }
 }

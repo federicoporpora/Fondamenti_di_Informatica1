@@ -103,6 +103,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_integrale_metodo_trapezi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_calcolo_media", "07-FunzParamRiferimento-TrattamentoErrori\08_calcolo_media\08_calcolo_media.vcxproj", "{2870E6A2-2463-453E-B490-A1D0061E2001}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09_max_min_ric", "07-FunzParamRiferimento-TrattamentoErrori\09_max_min_ric\09_max_min_ric.vcxproj", "{6CBBB05E-6B01-4577-A28F-B3A4F3AA4350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -447,6 +449,14 @@ Global
 		{2870E6A2-2463-453E-B490-A1D0061E2001}.Release|x64.Build.0 = Release|x64
 		{2870E6A2-2463-453E-B490-A1D0061E2001}.Release|x86.ActiveCfg = Release|Win32
 		{2870E6A2-2463-453E-B490-A1D0061E2001}.Release|x86.Build.0 = Release|Win32
+		{6CBBB05E-6B01-4577-A28F-B3A4F3AA4350}.Debug|x64.ActiveCfg = Debug|x64
+		{6CBBB05E-6B01-4577-A28F-B3A4F3AA4350}.Debug|x64.Build.0 = Debug|x64
+		{6CBBB05E-6B01-4577-A28F-B3A4F3AA4350}.Debug|x86.ActiveCfg = Debug|Win32
+		{6CBBB05E-6B01-4577-A28F-B3A4F3AA4350}.Debug|x86.Build.0 = Debug|Win32
+		{6CBBB05E-6B01-4577-A28F-B3A4F3AA4350}.Release|x64.ActiveCfg = Release|x64
+		{6CBBB05E-6B01-4577-A28F-B3A4F3AA4350}.Release|x64.Build.0 = Release|x64
+		{6CBBB05E-6B01-4577-A28F-B3A4F3AA4350}.Release|x86.ActiveCfg = Release|Win32
+		{6CBBB05E-6B01-4577-A28F-B3A4F3AA4350}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -492,6 +502,7 @@ Global
 		{1FAB95E0-C2B3-404F-AAE6-493FD29895C1} = {F83C269D-A279-431E-A21C-41134315C23D}
 		{D9D0404A-A529-4BF2-8EA8-B96D19134443} = {F83C269D-A279-431E-A21C-41134315C23D}
 		{2870E6A2-2463-453E-B490-A1D0061E2001} = {F83C269D-A279-431E-A21C-41134315C23D}
+		{6CBBB05E-6B01-4577-A28F-B3A4F3AA4350} = {F83C269D-A279-431E-A21C-41134315C23D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D4FB4E4-A4A1-471A-80D3-D5BC8820BE7F}
