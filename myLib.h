@@ -11,3 +11,4 @@ void mySwap(int *a, int *b);
 int myLen(int a);
 int myPalindromo(int x);
 int mySqrt(int x);
+void stampaVettori(int vettore[], int len);

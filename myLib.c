@@ -1,16 +1,13 @@
 #include <math.h>
 #include "myMath.h"
+#include <stdio.h>
 
 int myMin(int a, int b) {
-	int min;
-	min = (a < b) ? a : b;
-	return min;
+	return (a < b) ? a : b;
 }
 
 int myMax(int a, int b) {
-	int max;
-	max = (a > b) ? a : b;
-	return max;
+	return (a > b) ? a : b;
 }
 
 int myMCD(int a, int b) {
@@ -18,15 +15,15 @@ int myMCD(int a, int b) {
 		return a;
 	}
 	else if (a > b) {
-		MCD(a - b, b);
+		myMCD(a - b, b);
 	}
 	else {
-		MCD(a, b - a);
+		myMCD(a, b - a);
 	}
 }
 
 int myMcm(int a, int b) {
-	return (a * b) / MCD(a, b);
+	return (a * b) / myMCD(a, b);
 }
 
 int myFattoriale(int a) {
@@ -37,7 +34,7 @@ int myFattoriale(int a) {
 		return 1;
 	}
 	else {
-		return a * fattoriale(a - 1);
+		return a * myFattoriale(a - 1);
 	}
 }
 
@@ -50,19 +47,19 @@ int myPow(int a, int b) {
 }
 
 int myCoeffBin(int n, int k) {
-	return fattoriale(n) / (fattoriale(k) * fattoriale(n - k));
+	return myFattoriale(n) / (myFattoriale(k) * myFattoriale(n - k));
 }
 
 double myLog(double a, double b) {
 	return log(b) / log(a);
 }
 
-int mySum(int a) {
+int mySumUnder(int a) {
 	if (a <= 0) {
 		return 0;
 	}
 	else {
-		return a + sum_under(a - 1);
+		return a + mySumUnder(a - 1);
 	}
 }
 
@@ -108,4 +105,17 @@ int mySqrt(int x) {
 		result = i;
 	}
 	return result;
+}
+
+void stampaVettori(int vettore[], int len) {
+	printf("[");
+	for (int i = 0; i < len; i++) {
+		if (i < len - 1) {
+			printf("%d, ", vettore[i]);
+		}
+		else {
+			printf("%d", vettore[i]);
+		}
+	}
+	printf("]");
 }

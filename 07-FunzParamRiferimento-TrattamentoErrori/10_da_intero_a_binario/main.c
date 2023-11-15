@@ -7,19 +7,19 @@
 
 #include <stdio.h>
 
-void convertiBin(int bin);
+void convertiBin(int intero);
 
 int main() {
 
-    convertiBin(1023);
+    convertiBin(14);
 
     return 0;
 
 }
 
-void convertiBin(int bin) {
-    if (bin != 0) {
-        convertiBin(bin / 2);
-        printf("%d", bin % 2);
+void convertiBin(int intero) {
+    if (intero != 0) {
+        convertiBin(intero / 2);
+        printf("%d", intero % 2);
     }
 }

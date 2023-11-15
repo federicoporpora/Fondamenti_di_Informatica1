@@ -1,4 +1,11 @@
 #define _CRT_SECURE_NO_DEPRECATE
+
+/*
+    Creare un programma che legga da input un numero non noto a priori di interi (al più 10) terminati da 0. Tale sequenza può eventualmente contenere numeri ripetuti.
+    Si memorizzi tale sequenza in un vettore di opportuna dimensione.
+    Si stampino a video tutti i numeri per cui il successivo nel vettore è pari al numero stesso
+*/
+
 #include <stdio.h>
 #define DIM 10
 
