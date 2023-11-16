@@ -1,5 +1,5 @@
+#define _CRT_SECURE_NO_DEPRECATE
 #include <math.h>
-#include "myMath.h"
 #include <stdio.h>
 
 int myMin(int a, int b) {
@@ -63,7 +63,7 @@ int mySumUnder(int a) {
 	}
 }
 
-void mySwap(int *a, int *b) {
+void mySwap(int* a, int* b) {
 	int temp = *a;
 	*a = *b;
 	*b = temp;
@@ -107,15 +107,46 @@ int mySqrt(int x) {
 	return result;
 }
 
-void stampaVettori(int vettore[], int len) {
+void myStampaVettori(int arr[], int len) {
 	printf("[");
 	for (int i = 0; i < len; i++) {
 		if (i < len - 1) {
-			printf("%d, ", vettore[i]);
+			printf("%d, ", arr[i]);
 		}
 		else {
-			printf("%d", vettore[i]);
+			printf("%d", arr[i]);
 		}
 	}
 	printf("]");
+}
+
+int myRiempiVettori(int arr[], int dim) {
+	int n, len = 0;
+	do {
+		printf("Inserire un numero: ");
+		scanf("%d", &n);
+		if (n != 0 && len < dim) {
+			arr[len] = n;
+			len++;
+		}
+
+	} while (len < dim && n != 0);
+	return len;
+}
+
+int myRemoveDuplicates(int arr[], int len1, int noDupl[]) {
+	int len2 = 1, i, j;
+	noDupl[0] = arr[0];
+	for (i = 1; i < len1; i++) {
+		for (j = 0; j < len2; j++) {
+			if (arr[i] == noDupl[j]) {
+				break;
+			}
+			else if (j == len2 - 1) {
+				noDupl[len2] = arr[i];
+				len2++;
+			}
+		}
+	}
+	return len2;
 }

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{28eaa81c-a3f0-4d7b-9f52-8901b1ce30b5}</ProjectGuid>
-    <RootNamespace>prova</RootNamespace>
+    <ProjectGuid>{66827ad3-d622-40e1-97b0-9f496dbe2ce6}</ProjectGuid>
+    <RootNamespace>My05es5diap7</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,10 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
-    <ClCompile Include="myLib.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="myLib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
