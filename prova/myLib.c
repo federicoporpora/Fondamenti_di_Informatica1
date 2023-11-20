@@ -150,3 +150,15 @@ int myRemoveDuplicates(int arr[], int len1, int noDupl[]) {
 	}
 	return len2;
 }
+
+int myRicercaValori(int arr[], int len, int x) {
+	int i;
+	for (i = 0; i <= len; i++) {
+		if (i == len) {
+			return -1;
+		}
+		else if (arr[i] == x) {
+			return i;
+		}
+	}
+}
