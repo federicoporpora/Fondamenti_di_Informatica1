@@ -149,9 +149,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_dati_corso", "10-Stringh
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_strutture_squadre_calcio", "10-StringheStrutture\05_strutture_squadre_calcio\05_strutture_squadre_calcio.vcxproj", "{C9E895B6-0D3A-4386-B228-31F2A44F1D65}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{59ADDEB7-8D86-46F0-B1EC-6CC09200880F}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_calcolo_inflazione", "10-StringheStrutture\06_calcolo_inflazione\06_calcolo_inflazione.vcxproj", "{F7D8321B-D36B-4834-93DB-4A77E531C1BE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_esercizio_struct_time", "10-StringheStrutture\07_esercizio_struct_time\07_esercizio_struct_time.vcxproj", "{3DED192F-6ACB-44B1-B595-48C322758BAC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_controllo_prenotazioni", "10-StringheStrutture\08_controllo_prenotazioni\08_controllo_prenotazioni.vcxproj", "{50AE36A7-575B-4954-A9FB-34765658B4C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -689,6 +691,22 @@ Global
 		{F7D8321B-D36B-4834-93DB-4A77E531C1BE}.Release|x64.Build.0 = Release|x64
 		{F7D8321B-D36B-4834-93DB-4A77E531C1BE}.Release|x86.ActiveCfg = Release|Win32
 		{F7D8321B-D36B-4834-93DB-4A77E531C1BE}.Release|x86.Build.0 = Release|Win32
+		{3DED192F-6ACB-44B1-B595-48C322758BAC}.Debug|x64.ActiveCfg = Debug|x64
+		{3DED192F-6ACB-44B1-B595-48C322758BAC}.Debug|x64.Build.0 = Debug|x64
+		{3DED192F-6ACB-44B1-B595-48C322758BAC}.Debug|x86.ActiveCfg = Debug|Win32
+		{3DED192F-6ACB-44B1-B595-48C322758BAC}.Debug|x86.Build.0 = Debug|Win32
+		{3DED192F-6ACB-44B1-B595-48C322758BAC}.Release|x64.ActiveCfg = Release|x64
+		{3DED192F-6ACB-44B1-B595-48C322758BAC}.Release|x64.Build.0 = Release|x64
+		{3DED192F-6ACB-44B1-B595-48C322758BAC}.Release|x86.ActiveCfg = Release|Win32
+		{3DED192F-6ACB-44B1-B595-48C322758BAC}.Release|x86.Build.0 = Release|Win32
+		{50AE36A7-575B-4954-A9FB-34765658B4C9}.Debug|x64.ActiveCfg = Debug|x64
+		{50AE36A7-575B-4954-A9FB-34765658B4C9}.Debug|x64.Build.0 = Debug|x64
+		{50AE36A7-575B-4954-A9FB-34765658B4C9}.Debug|x86.ActiveCfg = Debug|Win32
+		{50AE36A7-575B-4954-A9FB-34765658B4C9}.Debug|x86.Build.0 = Debug|Win32
+		{50AE36A7-575B-4954-A9FB-34765658B4C9}.Release|x64.ActiveCfg = Release|x64
+		{50AE36A7-575B-4954-A9FB-34765658B4C9}.Release|x64.Build.0 = Release|x64
+		{50AE36A7-575B-4954-A9FB-34765658B4C9}.Release|x86.ActiveCfg = Release|Win32
+		{50AE36A7-575B-4954-A9FB-34765658B4C9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -757,8 +775,9 @@ Global
 		{F287322F-6E4F-4CF3-9F99-2D319DD40349} = {DE4B082C-F33F-4035-A3B1-3414CA63B1B4}
 		{23954A5E-8618-40AC-AB98-B2BA09E178CF} = {2584C2EA-1CAE-43F4-8627-A54B8A962502}
 		{C9E895B6-0D3A-4386-B228-31F2A44F1D65} = {2584C2EA-1CAE-43F4-8627-A54B8A962502}
-		{59ADDEB7-8D86-46F0-B1EC-6CC09200880F} = {2584C2EA-1CAE-43F4-8627-A54B8A962502}
 		{F7D8321B-D36B-4834-93DB-4A77E531C1BE} = {2584C2EA-1CAE-43F4-8627-A54B8A962502}
+		{3DED192F-6ACB-44B1-B595-48C322758BAC} = {2584C2EA-1CAE-43F4-8627-A54B8A962502}
+		{50AE36A7-575B-4954-A9FB-34765658B4C9} = {2584C2EA-1CAE-43F4-8627-A54B8A962502}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D4FB4E4-A4A1-471A-80D3-D5BC8820BE7F}
