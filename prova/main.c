@@ -1,13 +1,15 @@
 #define _CRT_SECURE_NO_DEPRECATE
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
+#include <stdbool.h>
 #include "myLib.h"
 
 int main() {
 
-    int a = 0, b = 2;
+    char a[10] = "puppa";
 
-    printf("%d", mySqrt(24));
+    printf("%d", strlen(a));
 
     return 0;
 
