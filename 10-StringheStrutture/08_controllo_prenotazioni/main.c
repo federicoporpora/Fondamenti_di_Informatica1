@@ -46,72 +46,43 @@
 */
 
 #include <stdio.h>
-#include <string.h>
+#include "gestione.h"
+
 #define DIM 10
 #define FINE -1
 #define STAMPA 0
 #define NOME 1
 #define OCCUPATO 0
 #define LIBERO 1
-
-typedef struct Booking {
-    char name[1024];
-    int seat;
-} booking;
-
-int leggi(booking* dest);
-int assegna(booking list[], int dim, int* lengthList, char name, int pref);
+#define RAGGIUNTODIM -1
 
 int main() {
 
     booking prenotazione, listaPrenotazioni[DIM];
-    int richiesta, nPrenotazioni = 0, i;
-    
-    while ((richiesta = leggi(&prenotazione)) == NOME) {
-        if (richiesta == NOME) {
-            if (assegna(listaPrenotazioni, DIM, &nPrenotazioni, &prenotazione.name, prenotazione.seat) == OCCUPATO) {
-                printf("Il posto richiesto e' occupato, riprovare");
+    int richiesta, nPrenotazioni = 0, i, LiberoOccupato;
+
+    do {
+        richiesta = leggi(&prenotazione);
+        if (richiesta == STAMPA) {
+            printf("\n");
+            for (i = 0; i < nPrenotazioni; i++) {
+                printf("Prenotazione %d: %s, posto %d\n", i + 1, listaPrenotazioni[i].name, listaPrenotazioni[i].seat);
+            }
+            printf("\n");
+        }
+        else if (richiesta == NOME) {
+            if ((LiberoOccupato = assegna(listaPrenotazioni, DIM, &nPrenotazioni, prenotazione.name, prenotazione.seat)) == LIBERO) {
+                printf("\nLa tua prenotazione e' stata aggiunta!\n\n");
+            }
+            else if (LiberoOccupato == RAGGIUNTODIM) {
+                printf("\nHai raggiunto il numero massimo di prenotazioni memorizzabili, scrivi 'stampa' o 'fine' per terminare il programma\n\n");
+            }
+            else if (LiberoOccupato == OCCUPATO) {
+                printf("\nIl posto e' occupato, riprova\n\n");
             }
         }
-    }
-    if (richiesta == STAMPA) {
-        for (i = 0; i < nPrenotazioni; i++) {
-            printf("\nPrenotazione %d: %s, posto %d", i + 1, listaPrenotazioni[i].name, listaPrenotazioni[i].seat);
-        }
-    }
-    if (richiesta == FINE) {
-        return 0;
-    }
+    } while (richiesta != FINE);
+
     return 0;
-
-}
-
-int leggi(booking* dest) {
-    char tempName[1024];
-    printf("Inserire il nome del cliente (max 1023 caratteri senza spazi): ");
-    scanf("%s", &tempName);
-    if (strcmp(tempName, "fine") == 0) {
-        return FINE;
-    }
-    if (strcmp(tempName, "stampa") == 0) {
-        return STAMPA;
-    }
-    else {
-        strcpy((*dest).name, tempName);
-        printf("Inserire il numero del posto: ");
-        scanf("%d", &(*dest).seat);
-    }
-    return NOME;
-}
-
-int assegna(booking list[], int dim, int* lengthList, char name, int pref) {
-    int i;
-    for (i = 0; i < (*lengthList); i++) {
-        if (list[i].seat == pref) {
-            return OCCUPATO;
-        }
-    }
-    strncpy(list[*lengthList].name, name, sizeof(list[*lengthList].name) - 1);
-    list[*lengthList].name[sizeof(list[*lengthList].name) - 1] = '\0';
 
 }
