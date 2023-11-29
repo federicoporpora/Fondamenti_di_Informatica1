@@ -121,7 +121,7 @@ int main() {
     FILE* fBol;
 
     if ((fBol = fopen("bologna.txt", "w")) == NULL) { //controllo apertura file bologna.txt
-        printf("Il file dati.txt non si e' aperto");
+        printf("Il file bologna.txt non si e' aperto");
         exit(1);
     }
 
