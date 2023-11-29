@@ -18,17 +18,15 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="myLib.c">
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="dati.txt">
       <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="myLib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="prova.txt">
+    </Text>
+    <Text Include="indirizzi.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="bologna.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>

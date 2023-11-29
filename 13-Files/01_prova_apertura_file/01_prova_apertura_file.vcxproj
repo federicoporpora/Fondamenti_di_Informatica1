@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{28eaa81c-a3f0-4d7b-9f52-8901b1ce30b5}</ProjectGuid>
-    <RootNamespace>prova</RootNamespace>
+    <ProjectGuid>{833437f5-f848-40dc-848f-87d217582990}</ProjectGuid>
+    <RootNamespace>My01provaaperturafile</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,13 +128,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
-    <ClCompile Include="myLib.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myLib.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="prova.txt" />
+    <Text Include="testo.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
