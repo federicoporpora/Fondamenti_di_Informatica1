@@ -171,6 +171,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12_da_intero_a_binario_str"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_programma_per_cinema", "13-Files\03_programma_per_cinema\03_programma_per_cinema.vcxproj", "{6895E2CC-977C-4B76-AF59-8B4B40C9AE24}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_pagamenti_calcolo", "13-Files\04_pagamenti_calcolo\04_pagamenti_calcolo.vcxproj", "{0ACF202C-62CD-4BFA-9A2D-AE61AF354684}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -779,6 +781,14 @@ Global
 		{6895E2CC-977C-4B76-AF59-8B4B40C9AE24}.Release|x64.Build.0 = Release|x64
 		{6895E2CC-977C-4B76-AF59-8B4B40C9AE24}.Release|x86.ActiveCfg = Release|Win32
 		{6895E2CC-977C-4B76-AF59-8B4B40C9AE24}.Release|x86.Build.0 = Release|Win32
+		{0ACF202C-62CD-4BFA-9A2D-AE61AF354684}.Debug|x64.ActiveCfg = Debug|x64
+		{0ACF202C-62CD-4BFA-9A2D-AE61AF354684}.Debug|x64.Build.0 = Debug|x64
+		{0ACF202C-62CD-4BFA-9A2D-AE61AF354684}.Debug|x86.ActiveCfg = Debug|Win32
+		{0ACF202C-62CD-4BFA-9A2D-AE61AF354684}.Debug|x86.Build.0 = Debug|Win32
+		{0ACF202C-62CD-4BFA-9A2D-AE61AF354684}.Release|x64.ActiveCfg = Release|x64
+		{0ACF202C-62CD-4BFA-9A2D-AE61AF354684}.Release|x64.Build.0 = Release|x64
+		{0ACF202C-62CD-4BFA-9A2D-AE61AF354684}.Release|x86.ActiveCfg = Release|Win32
+		{0ACF202C-62CD-4BFA-9A2D-AE61AF354684}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -857,6 +867,7 @@ Global
 		{C1A24508-686B-498E-ABCB-105BC2DAD438} = {2584C2EA-1CAE-43F4-8627-A54B8A962502}
 		{8E492999-4879-44B8-AE8D-12F8F11AB458} = {2584C2EA-1CAE-43F4-8627-A54B8A962502}
 		{6895E2CC-977C-4B76-AF59-8B4B40C9AE24} = {E3555104-75CE-4EB8-A38C-E498CE184847}
+		{0ACF202C-62CD-4BFA-9A2D-AE61AF354684} = {E3555104-75CE-4EB8-A38C-E498CE184847}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D4FB4E4-A4A1-471A-80D3-D5BC8820BE7F}
