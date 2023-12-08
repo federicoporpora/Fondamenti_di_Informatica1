@@ -33,8 +33,7 @@ int main() {
 
 	FILE* f1, * f2;
 	scontrino base;
-	int n = 0;
-
+	
 	if ((f1 = fopen("reg.dat", "wb")) == NULL) {
 		printf("Il file non e' stato aperto correttamente.");
 		exit(-1);
@@ -46,7 +45,7 @@ int main() {
 		if (base.importo != 0.0 || base.nOggetti != 0) {
 			scrivi(f1, base);
 		}
-	} while (base.importo != 0. || base.nOggetti != 0 || f1 == EOF);
+	} while (base.importo != 0.0 || base.nOggetti != 0 || f1 == EOF);
 
 	fclose(f1);
 
@@ -55,12 +54,9 @@ int main() {
 		exit(-1);
 	}
 
-	int i = 0;
-
 	while (leggi(f2, &base) > 0) {
 		printf("Prezzo: %.2f, pezzi: %d\n", base.importo, base.nOggetti);
 	}
-
 
 	fclose(f2);
 
