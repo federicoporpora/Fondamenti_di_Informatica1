@@ -79,6 +79,9 @@ int main() {
     float min, max;
 
     minimo = trovaMin(arr, DIM, &min);
+
+    rewind(fp);
+
     massimo = trovaMax(arr, DIM, &max);
 
     printf("Minimo: %f, massimo: %f", min, max);

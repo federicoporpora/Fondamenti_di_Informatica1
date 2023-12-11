@@ -23,25 +23,28 @@ int leggi(FILE* fp, azione dest[], int dim, char* nome) {
 }
 
 azione trovaMin(azione src[], int dim, float* val) {
+	if (dim <= 0) {
+		// Se l'array è vuoto, restituisci una struttura vuota
+		azione empty = { 0 };
+		*val = 0.0;
+		return empty;
+	}
+
 	int i;
-	azione minimo;
-	minimo.apertura = src[0].apertura;
-	minimo.chiusura = src[0].chiusura;
-	minimo.giorno = src[0].giorno;
-	strcpy(minimo.nome, src[0].nome);
+
+	azione minimo = src[0]; // Assume il primo elemento come minimo
 
 	for (i = 1; i < dim; i++) {
-		if (myMin(src[i].apertura, src[i].chiusura) < myMin(minimo.apertura, minimo.chiusura)) {
-			minimo.apertura = src[i].apertura;
-			minimo.chiusura = src[i].chiusura;
-			minimo.giorno = src[i].giorno;
-			strcpy(minimo.nome, src[i].nome);
+		float minimoAttuale = (src[i].apertura < src[i].chiusura) ? src[i].apertura : src[i].chiusura;
+		float minimoCorrente = (minimo.apertura < minimo.chiusura) ? minimo.apertura : minimo.chiusura;
+
+		if (minimoAttuale < minimoCorrente) {
+			minimo = src[i];
 		}
 	}
 
-	*val = myMin(minimo.apertura, minimo.chiusura);
+	*val = (minimo.apertura < minimo.chiusura) ? minimo.apertura : minimo.chiusura;
 	return minimo;
-
 }
 
 float myMin(float a, float b) {
@@ -49,19 +52,24 @@ float myMin(float a, float b) {
 }
 
 azione trovaMax(azione src[], int dim, float* val) {
+
+	if (dim <= 0) {
+		// Se l'array è vuoto, restituisci una struttura vuota
+		azione empty = { 0 };
+		*val = 0.0;
+		return empty;
+	}
+
 	int i;
-	azione massimo;
-	massimo.apertura = src[0].apertura;
-	massimo.chiusura = src[0].chiusura;
-	massimo.giorno = src[0].giorno;
-	strcpy(massimo.nome, src[0].nome);
+
+	azione massimo = src[0]; // Assume il primo elemento come massimo
 
 	for (i = 1; i < dim; i++) {
-		if (myMax(src[i].apertura, src[i].chiusura) > myMax(massimo.apertura, massimo.chiusura)) {
-			massimo.apertura = src[i].apertura;
-			massimo.chiusura = src[i].chiusura;
-			massimo.giorno = src[i].giorno;
-			strcpy(massimo.nome, src[i].nome);
+		float massimoAttuale = (src[i].apertura > src[i].chiusura) ? src[i].apertura : src[i].chiusura;
+		float massimoCorrente = (massimo.apertura > massimo.chiusura) ? massimo.apertura : massimo.chiusura;
+
+		if (massimoAttuale > massimoCorrente) {
+			massimo = src[i];
 		}
 	}
 
