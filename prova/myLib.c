@@ -162,3 +162,9 @@ int myRicercaValori(int arr[], int len, int x) {
 		}
 	}
 }
+
+//funzioni da inserire:
+//
+//	vari tipi di sorting algorithms
+//
+//	richiedere da standard input con funzione fgets stringhe con spazi all'interno
