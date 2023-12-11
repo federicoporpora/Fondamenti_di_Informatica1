@@ -1,6 +1,9 @@
 #define _CRT_SECURE_NO_DEPRECATE
-#include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include "myLib.h"
 
 int myMin(int a, int b) {
 	return (a < b) ? a : b;
@@ -163,8 +166,17 @@ int myRicercaValori(int arr[], int len, int x) {
 	}
 }
 
+void strConSpazi(char* stringa, int dim) {
+	int c;
+	int i = 0;
+
+	while ((c = getchar()) != '\n' && c != EOF && i < dim - 1) {
+		stringa[i++] = c;
+	}
+
+	stringa[i] = '\0';
+}
+
 //funzioni da inserire:
 //
 //	vari tipi di sorting algorithms
-//
-//	richiedere da standard input con funzione fgets stringhe con spazi all'interno

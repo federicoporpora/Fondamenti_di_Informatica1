@@ -15,3 +15,4 @@ void myStampaVettori(int arr[], int len);
 int myRiempiVettori(int arr[], int size);
 int myRemoveDuplicates(int arr[], int len1, int noDupl[]);
 int myRicercaValori(int arr[], int len, int x);
+void strConSpazi(char* stringa, int dim);

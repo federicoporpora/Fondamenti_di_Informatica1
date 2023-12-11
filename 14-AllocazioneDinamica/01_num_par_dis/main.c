@@ -10,7 +10,7 @@ void myStampaVettori(int arr[], int len);
 
 int main() {
 
-    int n, *arr;
+    int puppa, *arr;
     FILE* f;
     char request;
 
@@ -21,8 +21,8 @@ int main() {
 
     do {
         printf("Inserire un intero: ");
-        scanf("%d", &n);
-        fwrite(&n, sizeof(int), 1, f);
+        scanf("%d", &puppa);
+        fwrite(&puppa, sizeof(int), 1, f);
         printf("Continuare? (s/n) ");
         scanf("%*c");
         scanf("%c", &request);
@@ -45,16 +45,16 @@ int main() {
     arr = (int*)malloc(sizeof(int) * len);
 
     int i = 0;
-    while (fread(&n, sizeof(int), 1, f) == 1) {
-        if (n % 2 == 0) {
-            arr[i] = n;
+    while (fread(&puppa, sizeof(int), 1, f) == 1) {
+        if (puppa % 2 == 0) {
+            arr[i] = puppa;
             i++;
         }
     }
     rewind(f);
-    while (fread(&n, sizeof(int), 1, f) == 1) {
-        if (n % 2 == 1) {
-            arr[i] = n;
+    while (fread(&puppa, sizeof(int), 1, f) == 1) {
+        if (puppa % 2 == 1) {
+            arr[i] = puppa;
             i++;
         }
     }

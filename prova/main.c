@@ -1,35 +1,21 @@
+#define _CRT_SECURE_NO_DEPRECATE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
+#include <math.h>
+#include "myLib.h"
+
+#define DIM 64
 
 int main() {
 
-	char ago[10] = "puppa";
-	char pagliaio[50] = "pupupupupupupupupupupupupupupupupupuppa";
+	char stringa[DIM];
 
-	printf("%d", strStr(pagliaio, ago));
+	printf("Inserire la stringa con spazi: ");
+	strConSpazi(stringa, DIM);
+
+	printf("%s", stringa);
 
 	return 0;
 
-}
-
-int strStr(char* haystack, char* needle) {
-	long long i, j = 0;
-	for (i = 0; i <= strlen(haystack); i++) {
-		if (i == strlen(haystack)) {
-			return -1;
-		}
-		if (haystack[i] == needle[0]) {
-			while (j <= strlen(needle)) {
-				if (j == strlen(needle)) {
-					return i;
-				}
-				if (needle[j] == haystack[i + j]) {
-					j++;
-				}
-				else { break; }
-			}
-		}
-	}
 }

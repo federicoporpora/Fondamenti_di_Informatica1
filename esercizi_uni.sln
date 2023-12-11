@@ -189,6 +189,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_commerciante_macchina", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_persone_compatibili", "13-Files\08_persone_compatibili\08_persone_compatibili.vcxproj", "{27ACC67E-2B71-486F-8E97-18F24A23F070}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_esercizio_vale", "00_esercizi_miei\02_esercizio_vale\02_esercizio_vale.vcxproj", "{1783C481-18FA-4084-BD5D-B91A659BD193}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -861,6 +863,14 @@ Global
 		{27ACC67E-2B71-486F-8E97-18F24A23F070}.Release|x64.Build.0 = Release|x64
 		{27ACC67E-2B71-486F-8E97-18F24A23F070}.Release|x86.ActiveCfg = Release|Win32
 		{27ACC67E-2B71-486F-8E97-18F24A23F070}.Release|x86.Build.0 = Release|Win32
+		{1783C481-18FA-4084-BD5D-B91A659BD193}.Debug|x64.ActiveCfg = Debug|x64
+		{1783C481-18FA-4084-BD5D-B91A659BD193}.Debug|x64.Build.0 = Debug|x64
+		{1783C481-18FA-4084-BD5D-B91A659BD193}.Debug|x86.ActiveCfg = Debug|Win32
+		{1783C481-18FA-4084-BD5D-B91A659BD193}.Debug|x86.Build.0 = Debug|Win32
+		{1783C481-18FA-4084-BD5D-B91A659BD193}.Release|x64.ActiveCfg = Release|x64
+		{1783C481-18FA-4084-BD5D-B91A659BD193}.Release|x64.Build.0 = Release|x64
+		{1783C481-18FA-4084-BD5D-B91A659BD193}.Release|x86.ActiveCfg = Release|Win32
+		{1783C481-18FA-4084-BD5D-B91A659BD193}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -947,6 +957,7 @@ Global
 		{7522C5DF-0079-49BE-AD65-98DAFB91A610} = {3462DF06-CB78-4CEA-9E30-E71D18C16414}
 		{3AA7DA42-7D8D-4C59-B743-44AC66B17A1A} = {E3555104-75CE-4EB8-A38C-E498CE184847}
 		{27ACC67E-2B71-486F-8E97-18F24A23F070} = {E3555104-75CE-4EB8-A38C-E498CE184847}
+		{1783C481-18FA-4084-BD5D-B91A659BD193} = {235CBAB8-65A3-4330-A8AC-4A439089F9B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D4FB4E4-A4A1-471A-80D3-D5BC8820BE7F}
