@@ -180,3 +180,11 @@ void strConSpazi(char* stringa, int dim) {
 //funzioni da inserire:
 //
 //	vari tipi di sorting algorithms
+//
+//da ricordare all'esame:
+//	
+//	quando apri i file controlla se il puntatore non sia nullo
+//	chiudi sempre i file aperti
+//
+//	quando allochi della memoria dinamicamente ricorda di liberarla anche alla fine di
+//	ogni funzione
