@@ -8,14 +8,18 @@
 #define DIM 64
 
 int main() {
-
-	char stringa[DIM];
-
-	printf("Inserire la stringa con spazi: ");
-	strConSpazi(stringa, DIM);
-
-	printf("%s", stringa);
-
-	return 0;
-
+	list root = NULL, l;
+	int i;
+	do {
+		printf("\nIntrodurre valore :");
+		scanf("%d", &i);
+		root = insert(i, root);
+	} while (i != 0);
+	
+	l = root; // stampa
+	
+	while (l != NULL) {
+		printf("\nValore estratto : \t % d", l->value);
+		l = l->next;
+	}
 }
