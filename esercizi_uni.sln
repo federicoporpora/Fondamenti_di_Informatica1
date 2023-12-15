@@ -195,6 +195,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_programma_utenti_fedeli"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "00_simulazione_esame", "14-AllocazioneDinamica\00_simulazione_esame\00_simulazione_esame.vcxproj", "{FA2D392F-E535-4699-A496-0D020D552FF0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_negozio_cd", "14-AllocazioneDinamica\03_negozio_cd\03_negozio_cd.vcxproj", "{ABBBE3C0-DE11-403B-821D-A51C74983A18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -891,6 +893,14 @@ Global
 		{FA2D392F-E535-4699-A496-0D020D552FF0}.Release|x64.Build.0 = Release|x64
 		{FA2D392F-E535-4699-A496-0D020D552FF0}.Release|x86.ActiveCfg = Release|Win32
 		{FA2D392F-E535-4699-A496-0D020D552FF0}.Release|x86.Build.0 = Release|Win32
+		{ABBBE3C0-DE11-403B-821D-A51C74983A18}.Debug|x64.ActiveCfg = Debug|x64
+		{ABBBE3C0-DE11-403B-821D-A51C74983A18}.Debug|x64.Build.0 = Debug|x64
+		{ABBBE3C0-DE11-403B-821D-A51C74983A18}.Debug|x86.ActiveCfg = Debug|Win32
+		{ABBBE3C0-DE11-403B-821D-A51C74983A18}.Debug|x86.Build.0 = Debug|Win32
+		{ABBBE3C0-DE11-403B-821D-A51C74983A18}.Release|x64.ActiveCfg = Release|x64
+		{ABBBE3C0-DE11-403B-821D-A51C74983A18}.Release|x64.Build.0 = Release|x64
+		{ABBBE3C0-DE11-403B-821D-A51C74983A18}.Release|x86.ActiveCfg = Release|Win32
+		{ABBBE3C0-DE11-403B-821D-A51C74983A18}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -980,6 +990,7 @@ Global
 		{1783C481-18FA-4084-BD5D-B91A659BD193} = {235CBAB8-65A3-4330-A8AC-4A439089F9B2}
 		{FE508887-FC18-4C86-A163-A3333A1316EB} = {3462DF06-CB78-4CEA-9E30-E71D18C16414}
 		{FA2D392F-E535-4699-A496-0D020D552FF0} = {3462DF06-CB78-4CEA-9E30-E71D18C16414}
+		{ABBBE3C0-DE11-403B-821D-A51C74983A18} = {3462DF06-CB78-4CEA-9E30-E71D18C16414}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D4FB4E4-A4A1-471A-80D3-D5BC8820BE7F}
