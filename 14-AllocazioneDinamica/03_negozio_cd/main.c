@@ -1,5 +1,9 @@
 #define _CRT_SECURE_NO_DEPRECATE
 
+// cosi per dire sono il re
+// IL REEEEEE
+// ESERCIZIO AL PRIMO TENTATIVO NO DEBUG NO NULLA IL REEEEEEEEE
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
