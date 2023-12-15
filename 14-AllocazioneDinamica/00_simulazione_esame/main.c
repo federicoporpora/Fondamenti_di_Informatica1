@@ -19,6 +19,7 @@ typedef struct {
 } rimborso;
 
 void scriviSpese(char* nomeFile);
+spesa* leggiSpese(char* nomeFile, int* dim);
 
 int main() {
 
@@ -97,10 +98,14 @@ spesa* leggiSpese(char* nomeFile, int* dim) {
     return &arr[0];
 }
 
-void merge(int v[], int i1, int i2, int fine, int vout[]) {
+void ordina(spesa* v, int dim) {
+
+}
+
+void merge(spesa v[], int i1, int i2, int fine, spesa vout[]) {
     int i = i1, j = i2, k = i1;
     while (i <= i2 - 1 && j <= fine) {
-        if (v[i] < v[j])
+        if (v[i].viaggio < v[j].viaggio)
             vout[k] = v[i++];
         else
             vout[k] = v[j++];
@@ -111,8 +116,7 @@ void merge(int v[], int i1, int i2, int fine, int vout[]) {
     for (i = i1; i <= fine; i++) v[i] = vout[i];
 }
 
-void mergeSort(int v[], int first, int last,
-    int vout[]) {
+void mergeSort(spesa v[], int first, int last, spesa vout[]) {
     int mid;
     if (first < last) {
         mid = (last + first) / 2;
@@ -120,4 +124,27 @@ void mergeSort(int v[], int first, int last,
         mergeSort(v, mid + 1, last, vout);
         merge(v, first, mid + 1, last, vout);
     }
+}
+
+spesa* eliminaDuplicati(spesa* v, int dim, int* dimNew) {
+    spesa* dest;
+    dest = (spesa*)malloc(dim * sizeof(spesa));
+    (*dimNew) = 1;
+    dest[0] = v[0];
+    for (int i = 1; i < dim; i++) {
+        for (int j = 0; j < (*dimNew); j++) {
+            if (v[i].viaggio == v[j].viaggio) {
+                if (v[i].importo == v[j].importo) {
+                    if (strcmp(v[i].descr, v[j].descr) == 0) {
+                        break;
+                    }
+                }
+            }
+            if (j == (*dimNew) - 1) {
+                dest[(*dimNew)] = v[i];
+                (*dimNew)++;
+            }
+        }
+    }
+    return dest;
 }

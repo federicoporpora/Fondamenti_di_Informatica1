@@ -5,21 +5,26 @@
 #include <math.h>
 #include "myLib.h"
 
-#define DIM 64
+char* modify(char* s) {
+	int i = 0;
+	char* res;
+	for (; s[i] != '\0'; i++);
+	res = (char*)malloc(sizeof(char) * (i + 1));
+	for (i = 0; s[i] != '\0'; i++) {
+		if (i % 2 == 0)
+			res[i] = *(s + i);
+		else
+			res[i] = 'o';
+	}
+	*(res + i) = '\0';
+	return res;
+}
 
 int main() {
-	list root = NULL, l;
-	int i;
-	do {
-		printf("\nIntrodurre valore :");
-		scanf("%d", &i);
-		root = insert(i, root);
-	} while (i != 0);
-	
-	l = root; // stampa
-	
-	while (l != NULL) {
-		printf("\nValore estratto : \t % d", l->value);
-		l = l->next;
-	}
+	char* stringa = "cane";
+	char* post;
+	post = modify(stringa);
+	printf("%s\n", stringa);
+	printf("%s\n", post);
+	return 0;
 }
