@@ -18,35 +18,22 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="myLib.c">
+    <ClCompile Include="element.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="list.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="element.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myLib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <Text Include="risultati.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="element.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="prova.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="prova.dat">
-      <Filter>Source Files</Filter>
-    </None>
   </ItemGroup>
 </Project>

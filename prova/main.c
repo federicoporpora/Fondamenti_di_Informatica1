@@ -4,27 +4,15 @@
 #include <string.h>
 #include <math.h>
 #include "myLib.h"
-
-char* modify(char* s) {
-	int i = 0;
-	char* res;
-	for (; s[i] != '\0'; i++);
-	res = (char*)malloc(sizeof(char) * (i + 1));
-	for (i = 0; s[i] != '\0'; i++) {
-		if (i % 2 == 0)
-			res[i] = *(s + i);
-		else
-			res[i] = 'o';
-	}
-	*(res + i) = '\0';
-	return res;
-}
+#include "list.h"
 
 int main() {
-	char* stringa = "cane";
-	char* post;
-	post = modify(stringa);
-	printf("%s\n", stringa);
-	printf("%s\n", post);
-	return 0;
+	list l1 = emptyList();
+	int el;
+	do {
+		printf("\n Introdurre valore : \t");
+		scanf("%d", &el);
+		l1 = cons(el, l1);
+	} while (el != 0); // condizione arbitraria
+	showList(l1);
 }
