@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9d799488-86a6-4263-a20d-1576f7d86762}</ProjectGuid>
-    <RootNamespace>template</RootNamespace>
+    <ProjectGuid>{99ead8d4-43a4-49b0-9893-d464b3de185e}</ProjectGuid>
+    <RootNamespace>My03esercizioandriconticorrenti</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -131,13 +131,16 @@
     <ClCompile Include="funzioni.c" />
     <ClCompile Include="list.c" />
     <ClCompile Include="myLib.c" />
-    <ClCompile Include="template.c" />
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="element.h" />
     <ClInclude Include="funzioni.h" />
     <ClInclude Include="list.h" />
     <ClInclude Include="myLib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="transazioni.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

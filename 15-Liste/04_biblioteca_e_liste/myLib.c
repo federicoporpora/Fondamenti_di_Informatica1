@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include "list.h"
 #include "myLib.h"
 
 int myMin(int a, int b) {
@@ -204,6 +205,3 @@ int ricerca(int e, list l) {
 //
 //	quando allochi della memoria dinamicamente ricorda di liberarla anche alla fine di
 //	ogni funzione
-//
-//	ricontrolla di aver evitato alcun tipo di buffer override (anche quelli nelle stringhe
-//	per esempio quando le prendi da un file!!)

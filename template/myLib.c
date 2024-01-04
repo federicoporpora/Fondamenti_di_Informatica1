@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include "list.h"
 #include "myLib.h"
 
 int myMin(int a, int b) {
@@ -193,6 +194,106 @@ int ricerca(int e, list l) {
 	return trovato;
 }
 
+char* leggi_fino_a(FILE* file, char carattere) {
+	int dimensione_buffer = 100; // Dimensione iniziale del buffer
+	int posizione = 0; // Posizione attuale nel buffer
+	char* buffer = (char*)malloc(dimensione_buffer * sizeof(char)); // Allocazione iniziale del buffer
+
+	if (buffer == NULL) {
+		return NULL; // Errore di allocazione
+	}
+
+	char c;
+	while ((c = fgetc(file)) != carattere && c != EOF) {
+		if (posizione >= dimensione_buffer - 1) {
+			// Se raggiungiamo la fine del buffer, riallochiamo il buffer con una dimensione maggiore
+			dimensione_buffer *= 2;
+			char* temp = (char*)realloc(buffer, dimensione_buffer * sizeof(char));
+			if (temp == NULL) {
+				free(buffer);
+				return NULL; // Errore di riallocazione
+			}
+			buffer = temp;
+		}
+		buffer[posizione++] = c;
+	}
+
+	buffer[posizione] = '\0'; // Terminatore della stringa
+
+	// Rialloca la memoria per adattarla alla dimensione effettiva della stringa
+	char* risultato = (char*)malloc((posizione + 1) * sizeof(char));
+	if (risultato == NULL) {
+		free(buffer);
+		return NULL; // Errore di allocazione
+	}
+
+	// Copia il contenuto dal buffer alla stringa risultato
+	for (int i = 0; i <= posizione; i++) {
+		risultato[i] = buffer[i];
+	}
+
+	free(buffer); // Libera il buffer temporaneo
+
+	return risultato;
+}
+
+FILE* aperturaFile(const char* fileName, const char* openingMode) {
+	FILE* fp = fopen(fileName, openingMode);
+	if (fp == NULL) {
+		perror("Il file non esiste.");
+		exit(1);
+	}
+	return fp;
+}
+
+char* inputStringa(const char* frase, int* len) {
+	printf("%s ", frase);
+
+	printf("Inserisci una stringa: ");
+
+	// Allocazione iniziale del buffer
+	int buffer_size = 100; // Dimensione iniziale del buffer
+	char* input = (char*)malloc(buffer_size * sizeof(char));
+	if (input == NULL) {
+		printf("Errore di allocazione di memoria.\n");
+		return NULL;
+	}
+
+	int posizione = 0;
+	char c;
+	while ((c = getchar()) != '\n' && c != EOF) {
+		input[posizione++] = c;
+		if (posizione >= buffer_size - 1) {
+			// Se raggiungiamo la fine del buffer, riallochiamo il buffer con una dimensione maggiore
+			buffer_size *= 2;
+			char* temp = (char*)realloc(input, buffer_size * sizeof(char));
+			if (temp == NULL) {
+				free(input);
+				printf("Errore di riallocazione di memoria.\n");
+				return NULL;
+			}
+			input = temp;
+		}
+	}
+
+	input[posizione] = '\0'; // Terminatore della stringa
+
+	// Rialloca la memoria per adattarla alla dimensione effettiva della stringa
+	char* nuova_stringa = (char*)malloc((posizione + 1) * sizeof(char));
+	if (nuova_stringa == NULL) {
+		free(input);
+		printf("Errore di allocazione di memoria.\n");
+		return NULL;
+	}
+
+	strcpy(nuova_stringa, input); // Copia la stringa input nella nuova stringa
+	*len = posizione; // Lunghezza della nuova stringa
+
+	free(input); // Libera il buffer temporaneo
+
+	return nuova_stringa;
+}
+
 //funzioni da inserire:
 //
 //	vari tipi di sorting algorithms
@@ -204,6 +305,3 @@ int ricerca(int e, list l) {
 //
 //	quando allochi della memoria dinamicamente ricorda di liberarla anche alla fine di
 //	ogni funzione
-//
-//	ricontrolla di aver evitato alcun tipo di buffer override (anche quelli nelle stringhe
-//	per esempio quando le prendi da un file!!)

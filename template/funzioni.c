@@ -6,9 +6,3 @@
 #include "list.h"
 #include "myLib.h"
 #include "funzioni.h"
-
-int main() {
-
-
-	return 0;
-}

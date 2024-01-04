@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9d799488-86a6-4263-a20d-1576f7d86762}</ProjectGuid>
-    <RootNamespace>template</RootNamespace>
+    <ProjectGuid>{a7031e64-0413-4519-8cda-8074c97ecfff}</ProjectGuid>
+    <RootNamespace>My04bibliotecaeliste</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -130,14 +130,17 @@
     <ClCompile Include="element.c" />
     <ClCompile Include="funzioni.c" />
     <ClCompile Include="list.c" />
+    <ClCompile Include="main.c" />
     <ClCompile Include="myLib.c" />
-    <ClCompile Include="template.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="element.h" />
     <ClInclude Include="funzioni.h" />
     <ClInclude Include="list.h" />
     <ClInclude Include="myLib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="archivio.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

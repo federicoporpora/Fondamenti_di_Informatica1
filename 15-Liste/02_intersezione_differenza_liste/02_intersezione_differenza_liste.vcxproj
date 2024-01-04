@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -18,11 +18,24 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="element.h" />
+    <ClInclude Include="funzioni.h" />
+    <ClInclude Include="list.h" />
+    <ClInclude Include="myLib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="element.c" />
+    <ClCompile Include="funzioni.c" />
+    <ClCompile Include="list.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="myLib.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9d799488-86a6-4263-a20d-1576f7d86762}</ProjectGuid>
-    <RootNamespace>template</RootNamespace>
+    <ProjectGuid>{eb2bc094-b5f8-4e15-87ab-49cfef3d82dd}</ProjectGuid>
+    <RootNamespace>My02intersezionedifferenzaliste</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -126,19 +139,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="element.c" />
-    <ClCompile Include="funzioni.c" />
-    <ClCompile Include="list.c" />
-    <ClCompile Include="myLib.c" />
-    <ClCompile Include="template.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="element.h" />
-    <ClInclude Include="funzioni.h" />
-    <ClInclude Include="list.h" />
-    <ClInclude Include="myLib.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

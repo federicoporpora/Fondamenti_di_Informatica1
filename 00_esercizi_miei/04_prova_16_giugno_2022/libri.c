@@ -5,10 +5,5 @@
 #include <math.h>
 #include "list.h"
 #include "myLib.h"
-#include "funzioni.h"
+#include "libri.h"
 
-int main() {
-
-
-	return 0;
-}
