@@ -1,10 +1,3 @@
-typedef struct list_element {
-	int value;
-	struct list_element* next;
-} item;
-
-typedef item* list;
-
 int myMin(int a, int b);
 int myMax(int a, int b);
 int myMCD(int a, int b);

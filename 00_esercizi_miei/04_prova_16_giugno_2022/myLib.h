@@ -16,8 +16,6 @@ int myRiempiVettori(int arr[], int size);
 int myRemoveDuplicates(int arr[], int len1, int noDupl[]);
 int myRicercaValori(int arr[], int len, int x);
 void strConSpazi(char* stringa, int dim);
-list insert(int e, list l);
-int ricerca(int e, list l);
 char* leggi_fino_a(FILE* file, char carattere);
 FILE* aperturaFile(const char* fileName, const char* openingMode);
 char* inputStringa(const char* frase, int* len);

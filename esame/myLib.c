@@ -1,3 +1,4 @@
+//Porpora Federico 0001114450 10/01/2024
 #define _CRT_SECURE_NO_DEPRECATE
 #include <stdio.h>
 #include <stdlib.h>
@@ -65,12 +66,6 @@ int mySumUnder(int a) {
 	else {
 		return a + mySumUnder(a - 1);
 	}
-}
-
-void mySwap(int* a, int* b) {
-	int temp = *a;
-	*a = *b;
-	*b = temp;
 }
 
 int myLen(int a) {
@@ -388,10 +383,77 @@ void quickSort(int a[], int dim)
 	quickSortR(a, 0, dim - 1);
 }
 
+int contaRighe(FILE* fp) {
+	int righe = 0;
+	char carattere;
+
+	// Legge il file carattere per carattere fino alla fine del file
+	while ((carattere = fgetc(fp)) != EOF) {
+		if (carattere == '\n') {
+			righe++;
+		}
+	}
+
+	// Conteggio finale della riga se il file non termina con un newline
+	if (carattere != '\n' && righe != 0) {
+		righe++;
+	}
+
+	rewind(fp);
+
+	return righe;
+}
+
 //da ricordare all'esame:
 //	
-//	quando apri i file controlla se il puntatore non sia nullo
+//	quando apri i file controlla che il puntatore non sia nullo
 //	chiudi sempre i file aperti
 //
-//	quando allochi della memoria dinamicamente ricorda di liberarla anche alla fine di
-//	ogni funzione
+//	quando allochi della memoria dinamicamente ricorda di liberarla (anche alla fine di ogni funzione)
+//
+//	dealloca correttamente le liste alla fine dei file
+
+
+
+//#define _CRT_SECURE_NO_DEPRECATE
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdlib.h>
+//#include <math.h>
+//#include "list.h"
+//#include "myLib.h"
+//
+//int main() {
+//
+//
+//	return 0;
+//}
+
+//int isGreaterThan(struct MyStruct a, struct MyStruct b) {
+//	if (a.integer > b.integer) {
+//		return 1;
+//	}
+//	else if (a.integer < b.integer) {
+//		return 0;
+//	}
+//	else {
+//		// Se gli interi sono uguali, confronto la prima stringa
+//		int firstStrCompare = strcmp(a.str1, b.str1);
+//
+//		if (firstStrCompare > 0) {
+//			return 1;
+//		}
+//		else if (firstStrCompare < 0) {
+//			return 0;
+//		}
+//		else {
+//			// Se la prima stringa è uguale, confronto la seconda stringa
+//			if (strcmp(a.str2, b.str2) > 0) {
+//				return 1;
+//			}
+//			else {
+//				return 0;
+//			}
+//		}
+//	}
+//}

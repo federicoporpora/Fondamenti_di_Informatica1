@@ -1,3 +1,4 @@
+//Porpora Federico 0001114450 10/01/2024
 #define _CRT_SECURE_NO_DEPRECATE
 #include "element.h"
 #include <stdio.h>
@@ -16,6 +17,6 @@
 //	return el;
 //}
 //
-void printElement(element el) {
-	printf("Cliente: %d\tTitolo: %s\n", el.cliente, el.titolo);
-}
+//void printElement(element el) {
+//	printf("%d", el);
+//}

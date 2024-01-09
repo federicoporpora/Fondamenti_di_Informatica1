@@ -178,22 +178,6 @@ void strConSpazi(char* stringa, int dim) {
 	stringa[i] = '\0';
 }
 
-list insert(int e, list l) {
-	list t;
-
-	t = (list)malloc(sizeof(item));
-	t->value = e; t->next = l;
-	return t;
-}
-
-int ricerca(int e, list l) {
-	int trovato = 0;
-	while ((l != NULL) && !trovato)
-		if (l->value == e) trovato = 1;
-		else l = l->next;
-	return trovato;
-}
-
 char* leggi_fino_a(FILE* file, char carattere) {
 	int dimensione_buffer = 100; // Dimensione iniziale del buffer
 	int posizione = 0; // Posizione attuale nel buffer

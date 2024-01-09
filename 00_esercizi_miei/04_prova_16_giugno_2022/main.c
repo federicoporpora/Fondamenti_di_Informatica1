@@ -9,9 +9,19 @@
 
 int main() {
 
-	FILE* fp = aperturaFile("store.txt", "r");
+	Libro* elenco;
+	int dim;
 
-	printf("%s", leggi_fino_a(fp, ';'));
+	elenco = leggiLibri("store.txt", &dim);
+
+	stampaStore(elenco, dim);
+
+	list richieste = leggiRichieste("richieste.txt");
+
+	while (!empty(richieste)) {
+		printElement(head(richieste));
+		richieste = tail(richieste);
+	}
 
 	return 0;
 }
