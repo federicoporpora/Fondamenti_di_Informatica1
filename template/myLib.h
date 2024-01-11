@@ -1,5 +1,3 @@
-//Porpora Federico 0001114450 10/01/2024
-
 int myMin(int a, int b);
 int myMax(int a, int b);
 int myMCD(int a, int b);

@@ -1,5 +1,3 @@
-//Porpora Federico 0001114450 10/01/2024
-
 #define _CRT_SECURE_NO_DEPRECATE
 #include "element.h"
 #include <stdio.h>

@@ -1,5 +1,3 @@
-//Porpora Federico 0001114450 10/01/2024
-
 typedef int element;
 typedef enum { false, true } boolean;
 
