@@ -1,3 +1,5 @@
+//Porpora Federico 0001114450 10/01/2024
+
 #define _CRT_SECURE_NO_DEPRECATE
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,20 +29,20 @@ list cons(element e, list l) {
 }
 
 /* ---- NON PRIMITIVE ---- */
-void showList(list l) {
-	printf("[");
-	while (!empty(l)) {
-		printf("%d", head(l));
-		l = tail(l);
-		if (!empty(l)) printf(", ");
-	} printf("]\n");
-}
+//void showList(list l) {
+//	printf("[");
+//	while (!empty(l)) {
+//		printf("%d", head(l));
+//		l = tail(l);
+//		if (!empty(l)) printf(", ");
+//	} printf("]\n");
+//}
 
-boolean member(element el, list l) {
-	if (empty(l)) return false;
-	else if (el == head(l)) return true;
-	else return member(el, tail(l));
-}
+//boolean member(element el, list l) {
+//	if (empty(l)) return false;
+//	else if (isEqual(el, head(l))) return true;
+//	else return member(el, tail(l));
+//}
 
 int length(list l) {
 	if (empty(l)) return 0;
@@ -63,11 +65,11 @@ list copy(list l) {
 	else return cons(head(l), copy(tail(l)));
 }
 
-list delete(element el, list l) {
-	if (empty(l)) return emptyList();
-	else if (el == head(l)) return tail(l);
-	else return cons(head(l), delete(el, tail(l)));
-}
+//list delete(element el, list l) {
+//	if (empty(l)) return emptyList();
+//	else if (isEqual(el, head(l))) return tail(l);
+//	else return cons(head(l), delete(el, tail(l)));
+//}
 
 void freelist(list l) {
 	if (empty(l)) return;
@@ -79,18 +81,18 @@ void freelist(list l) {
 	return;
 }
 
-list insord(element el, list l) {
-	if (empty(l)) return cons(el, l);
-	else if (el <= head(l)) return cons(el, l);
-	else return cons(head(l), insord(el, tail(l)));
-}
-
-list inputordlist(int n) {
-	element e;
-	if (n < 0) exit(1);
-	else if (n == 0) return emptyList();
-	else {
-		scanf("%d", &e);
-		return insord(e, inputordlist(n - 1));
-	}
-}
+//list insord(element el, list l) {
+//	if (empty(l)) return cons(el, l);
+//	else if (isLess(el, head(l))) return cons(el, l);
+//	else return cons(head(l), insord(el, tail(l)));
+//}
+//
+//list inputordlist(int n) {
+//	element e;
+//	if (n < 0) exit(1);
+//	else if (n == 0) return emptyList();
+//	else {
+//		scanf("%d", &e);
+//		return insord(e, inputordlist(n - 1));
+//	}
+//}

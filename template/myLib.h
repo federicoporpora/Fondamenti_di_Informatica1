@@ -1,3 +1,5 @@
+//Porpora Federico 0001114450 10/01/2024
+
 int myMin(int a, int b);
 int myMax(int a, int b);
 int myMCD(int a, int b);
@@ -7,7 +9,6 @@ int myPow(int a, int b);
 int myCoeffBin(int n, int k);
 double myLog(double a, double b);
 int mySumUnder(int a);
-void mySwap(int* a, int* b);
 int myLen(int a);
 int myPalindromo(int x);
 int mySqrt(int x);
@@ -29,3 +30,4 @@ void merge(int v[], int i1, int i2, int fine, int vout[]);
 void mergeSort(int v[], int first, int last, int vout[]);
 void quickSortR(int a[], int iniz, int fine);
 void quickSort(int a[], int dim);
+int contaRighe(FILE* filePtr);

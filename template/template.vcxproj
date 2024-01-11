@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9d799488-86a6-4263-a20d-1576f7d86762}</ProjectGuid>
+    <ProjectGuid>{027cf7aa-560d-4505-8648-cdc052c68b84}</ProjectGuid>
     <RootNamespace>template</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -128,14 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="element.c" />
-    <ClCompile Include="funzioni.c" />
     <ClCompile Include="list.c" />
+    <ClCompile Include="main.c" />
     <ClCompile Include="myLib.c" />
-    <ClCompile Include="template.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="element.h" />
-    <ClInclude Include="funzioni.h" />
     <ClInclude Include="list.h" />
     <ClInclude Include="myLib.h" />
   </ItemGroup>

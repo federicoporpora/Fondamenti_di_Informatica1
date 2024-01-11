@@ -15,16 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="template.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="element.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="funzioni.c">
+    <ClCompile Include="list.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="list.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="myLib.c">
@@ -33,9 +30,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="element.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="funzioni.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="list.h">
