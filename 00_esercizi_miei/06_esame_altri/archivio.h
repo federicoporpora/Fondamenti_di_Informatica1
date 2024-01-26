@@ -1,0 +1,15 @@
+void stampaUnaFoto(Foto input);
+Foto leggi_una_foto(FILE* fp);
+list leggi_tutte_foto(char* fileName);
+void stampa_foto(list leFoto, char* autore);
+Foto* filtra(list leFoto, char* keyword, int* dim);
+void stampaVettore(Foto* arr, int dim);
+int isGreaterThan(Foto a, Foto b);
+int isEqualTo(Foto a, Foto b);
+void scambia(Foto* a, Foto* b);
+void quickSortR(Foto* a, int iniz, int fine);
+void ordina(Foto* leFoto, int dim);
+int isEqualToComplete(Foto a, Foto b);
+int member(Foto unaFoto, list leFoto);
+list ripetuti(list leFoto);
+void statistiche(Foto* leFoto, int dim);

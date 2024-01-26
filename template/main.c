@@ -6,10 +6,10 @@
 #include "list.h"
 #include "myLib.h"
 
-
 int main() {
 
 
 
 	return 0;
+
 }

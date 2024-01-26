@@ -272,12 +272,12 @@ char* inputStringa(const char* frase, int* len) {
 	return nuova_stringa;
 }
 
-void scambia(int* a, int* b)
-{
-	int tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
+//void scambia(int* a, int* b)
+//{
+//	int tmp = *a;
+//	*a = *b;
+//	*b = tmp;
+//}
 
 int trovaPosMax(int v[], int n) {
 	int i, posMax = 0;
@@ -347,40 +347,40 @@ void mergeSort(int v[], int first, int last, int vout[]) {
 	}
 }
 
-void quickSortR(int a[], int iniz, int fine)
-{
-	int i, j, iPivot, pivot;
-	if (iniz < fine)
-	{
-		i = iniz;
-		j = fine;
-		iPivot = fine;
-		pivot = a[iPivot];
-		do /* trova la posizione del pivot */
-		{
-			while (i < j && a[i] <= pivot) i++;
-			while (j > i && a[j] >= pivot) j--;
-			if (i < j) scambia(&a[i], &a[j]);
-		} while (i < j);
-		/* determinati i due sottoinsiemi */
- /* posiziona il pivot */
-		if (i != iPivot && a[i] != a[iPivot])
-		{
-			scambia(&a[i], &a[iPivot]);
-			iPivot = i;
-		}
-		/* ricorsione sulle sottoparti, se necessario */
-		if (iniz < iPivot - 1)
-			quickSortR(a, iniz, iPivot - 1);
-		if (iPivot + 1 < fine)
-			quickSortR(a, iPivot + 1, fine);
-	} /* (iniz < fine) */
-}
-
-void quickSort(int a[], int dim)
-{
-	quickSortR(a, 0, dim - 1);
-}
+//void quickSortR(int a[], int iniz, int fine)
+//{
+//	int i, j, iPivot, pivot;
+//	if (iniz < fine)
+//	{
+//		i = iniz;
+//		j = fine;
+//		iPivot = fine;
+//		pivot = a[iPivot];
+//		do /* trova la posizione del pivot */
+//		{
+//			while (i < j && a[i] <= pivot) i++;
+//			while (j > i && a[j] >= pivot) j--;
+//			if (i < j) scambia(&a[i], &a[j]);
+//		} while (i < j);
+//		/* determinati i due sottoinsiemi */
+// /* posiziona il pivot */
+//		if (i != iPivot && a[i] != a[iPivot])
+//		{
+//			scambia(&a[i], &a[iPivot]);
+//			iPivot = i;
+//		}
+//		/* ricorsione sulle sottoparti, se necessario */
+//		if (iniz < iPivot - 1)
+//			quickSortR(a, iniz, iPivot - 1);
+//		if (iPivot + 1 < fine)
+//			quickSortR(a, iPivot + 1, fine);
+//	} /* (iniz < fine) */
+//}
+//
+//void quickSort(int a[], int dim)
+//{
+//	quickSortR(a, 0, dim - 1);
+//}
 
 int contaRighe(FILE* fp) {
 	int righe = 0;
@@ -470,7 +470,7 @@ int contaRighe(FILE* fp) {
 //	result = NULL;
 //	fp = fopen(fileName, "rt");
 //	if (fp != NULL) {
-//		count = contaRighe(fp);
+//		count = contarighe(fp);
 //		if (count > 0) {
 //			result = (struct*)malloc(sizeof(struct) * count);
 //			while (fscanf(fp, "%d%s", &(temp.intero), temp.stringa) == 2) {
@@ -489,7 +489,7 @@ int contaRighe(FILE* fp) {
 //	FILE* fp;
 //	list result;
 //	struct temp;
-//	result = emptyList();
+//	result = emptylist();
 //	fp = fopen(fileName, "rt");
 //	if (fp != NULL) {
 //		while (fscanf(fp, "%d%s", &(temp.intero), temp.stringa) == 2)
