@@ -227,8 +227,6 @@ FILE* aperturaFile(const char* fileName, const char* openingMode) {
 char* inputStringa(const char* frase, int* len) {
 	printf("%s ", frase);
 
-	printf("Inserisci una stringa: ");
-
 	// Allocazione iniziale del buffer
 	int buffer_size = 100; // Dimensione iniziale del buffer
 	char* input = (char*)malloc(buffer_size * sizeof(char));
