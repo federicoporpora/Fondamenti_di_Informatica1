@@ -20,6 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="prova 1.txt" />
+    <Text Include="puppa.asc" />
+    <Text Include="puppa Corretto.asc" />
   </ItemGroup>
 </Project>

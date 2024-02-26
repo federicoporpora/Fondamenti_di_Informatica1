@@ -430,32 +430,21 @@ int contaRighe(FILE* fp) {
 
 // FUNZIONE SOSTITUTIVA DI > NELLE STRUTTURE (PER ALGORITMI DI ORDINAMENTO) (DA MODIFICARE IN OGNI CASO)
 
-//int isGreaterThan(struct MyStruct a, struct MyStruct b) {
-//	if (a.integer > b.integer) {
+//int isGreaterThan(Foto a, Foto b) {
+//	// Se gli interi sono uguali, confronto la prima stringa
+//	int firstStrCompare = strcmp(a.nome, b.nome);
+//
+//	if (firstStrCompare > 0) {
 //		return 1;
 //	}
-//	else if (a.integer < b.integer) {
+//	else if (firstStrCompare < 0) {
 //		return 0;
 //	}
-//	else {
-//		// Se gli interi sono uguali, confronto la prima stringa
-//		int firstStrCompare = strcmp(a.str1, b.str1);
-//
-//		if (firstStrCompare > 0) {
-//			return 1;
-//		}
-//		else if (firstStrCompare < 0) {
-//			return 0;
-//		}
-//		else {
-//			// Se la prima stringa è uguale, confronto la seconda stringa
-//			if (strcmp(a.str2, b.str2) > 0) {
-//				return 1;
-//			}
-//			else {
-//				return 0;
-//			}
-//		}
+//	else if (a.id >= b.id) {
+//		return 1;
+//	}
+//	else if (a.id < b.id) {
+//		return 0;
 //	}
 //}
 

@@ -22,8 +22,6 @@ Foto leggi_una_foto(FILE* fp) {
 	return result;
 }
 
-
-
 list leggi_tutte_foto(char* fileName) {
 	FILE* fp;
 	list result;
@@ -39,8 +37,8 @@ list leggi_tutte_foto(char* fileName) {
 			}
 		} while (temp.id != -1);
 		fclose(fp);
+		result = reverse(result);
 	}
-	result = reverse(result);
 	return result;
 }
 
@@ -80,13 +78,13 @@ Foto* filtra(list leFoto, char* keyword, int* dim) {
 		}
 		temp = tail(temp);
 	}
-	return result;
 	freelist(temp);
+	return result;
 }
 
 void stampaVettore(Foto* arr, int dim) {
 	for (int i = 0; i < dim; i++) {
-		printf("Id: %d\tNome: %s\tDescrizione: %s\n", arr[i].id, arr[i].nome, arr[i].descr);
+		stampaUnaFoto(arr[i]);
 	}
 }
 

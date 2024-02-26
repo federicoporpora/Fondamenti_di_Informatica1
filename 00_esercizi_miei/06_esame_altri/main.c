@@ -9,25 +9,26 @@
 
 int main() {
 
+	// es 1
+	//FILE* fp = fopen("archivio.txt", "r");
+	//Foto puppa = leggi_una_foto(fp);
+	//stampaUnaFoto(puppa);
+
+	//list leFoto = emptyList();
+	//leFoto = leggi_tutte_foto("archivio.txt");
+	//stampa_foto(leFoto, "");
+
+
+	// es 2
+	Foto* array;
 	int dim;
-	char keyword[DIM_NOME];
-	list leFoto;
-	list noRep;
-	Foto* arr;
-
-	printf("Inserire una keyword: ");
-	scanf("%s", keyword);
+	list leFoto = emptyList();
 	leFoto = leggi_tutte_foto("archivio.txt");
-	noRep = ripetuti(leFoto);
-	arr = filtra(leFoto, keyword, &dim);
-	printf("\n");
-	stampaVettore(arr, dim);
-	printf("\n");
-	statistiche(arr, dim);
-
-	freelist(leFoto);
-	freelist(noRep);
-	free(arr);
+	array = filtra(leFoto, "calcio", &dim);
+	ordina(leFoto, dim);
+	for (int i = 0; i < dim; i++) {
+		stampaUnaFoto(array[i]);
+	}
 
 	return 0;
 }

@@ -130,7 +130,8 @@
     <ClCompile Include="programmaFede.c" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="prova 1.txt" />
+    <Text Include="puppa Corretto.asc" />
+    <Text Include="puppa.asc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
