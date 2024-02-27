@@ -7,8 +7,11 @@
 #include "myLib.h"
 
 int main() {
-
-	printf("Hello World!");
+	int i = 8;
+	i = 9;
+	i=20;
+	printf("%d", i);
+	printf("DAI CHE ANDIAMO");
 	return 0;
 
 }

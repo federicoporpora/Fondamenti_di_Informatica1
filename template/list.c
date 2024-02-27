@@ -6,8 +6,8 @@
 /* ---- PRIMITIVE ---- */
 list emptyList(void) { return NULL; }
 
-boolean empty(list l) {
-	if (l == NULL) return true; else return false;
+int empty(list l) {
+	if (l == NULL) return 1; else return 0;
 }
 
 element head(list l) {
@@ -36,9 +36,9 @@ list cons(element e, list l) {
 //	} printf("]\n");
 //}
 
-//boolean member(element el, list l) {
-//	if (empty(l)) return false;
-//	else if (isEqual(el, head(l))) return true;
+//int member(element el, list l) {
+//	if (empty(l)) return 0;
+//	else if (isEqual(el, head(l))) return 1;
 //	else return member(el, tail(l));
 //}
 
@@ -63,7 +63,7 @@ list copy(list l) {
 	else return cons(head(l), copy(tail(l)));
 }
 
-//list delete(element el, list l) {
+//list deleteElement(element el, list l) {
 //	if (empty(l)) return emptyList();
 //	else if (isEqual(el, head(l))) return tail(l);
 //	else return cons(head(l), delete(el, tail(l)));
