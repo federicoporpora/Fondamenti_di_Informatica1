@@ -10,7 +10,7 @@
 //occhio alla prima riga che va copiata pari pari
 //sostituisci tutti i punti interrogativi con -999
 //compara i timestamp e se sono uguali cancella
-//a volte file .csv (carattere ;) a volte .txt (carattere \t)
+//a volte file .csv (separatore ;) a volte .txt (separatore \t) a volte .asv (separatore ;)
 
 typedef struct {
 	char* timestamp, *mis1, *mis2, *mis3, *mis4, *mis5, *mis6, *resto;
@@ -28,10 +28,10 @@ int main() {
 	FILE* scrittura;
 
 	//input nome file
-	char nomeFileLettura[FILE_LEN + 5];
-	char nomeFileScrittura[FILE_LEN + 11];
+	char nomeFileLettura[FILE_LEN + 5]; // 5 = ".xyz" -> 4 caratteri + \0
+	char nomeFileScrittura[FILE_LEN + 11]; // 11 = " Corretto" -> 9 caratteri + ".xyz" + \0
 	printf("Inserire il nome del file (max %d caratteri): ", FILE_LEN);
-	strConSpazi(nomeFileLettura, FILE_LEN);
+	strConSpazi(nomeFileLettura, FILE_LEN); // prende il nome da utente anche con spazi
 
 	//input formato file
 	char formatoFile[5];
@@ -44,6 +44,7 @@ int main() {
 	scanf("%*c");
 	scanf("%c", &separatore);
 
+	//cose varie per formattazione file lettura e scrittura
 	strcpy(nomeFileScrittura, nomeFileLettura);
 	strcat(nomeFileLettura, formatoFile);
 	strcat(nomeFileScrittura, " Corretto");
@@ -55,12 +56,15 @@ int main() {
 		exit(1);
 	}
 	if ((scrittura = fopen(nomeFileScrittura, "w")) == NULL) {
-		perror("Non è stato possibile creare il file in scrittura");
+		perror("Non ï¿½ stato possibile creare il file in scrittura");
 		exit(2);
 	}
+
+	//cancella righe prima e dopo della riga con la descrizione dei dati
 	int righePrima, righeDopo;
 	printf("Inserire il numero di righe da cancellare prima e dopo la descrizione delle colonne (es: 2 2): ");
 	scanf("%d%d", &righePrima, &righeDopo);
+
 	//conta le righe per capire quanto fare lungo il loop
 	int righe = contaRighe(lettura) - 5;
 
@@ -71,7 +75,9 @@ int main() {
 			}
 		}
 	}
-	leggiRiga(lettura, scrittura);	//scrittura della prima riga nel secondo file
+
+	//scrittura della prima riga nel secondo file
+	leggiRiga(lettura, scrittura);
 	for (int i = 0; i < righeDopo; i++) {
 		while (1) {
 			if (fgetc(lettura) == '\n') {
@@ -80,78 +86,97 @@ int main() {
 		}
 	}
 
-	Riga temp, temp2;
+	//lettura della prima riga utile
+	Riga rigaBase, rigaNuova;
 	int daStampare = 0;
 
-	//lettura della prima riga utile
-	temp.timestamp = leggi_fino_a(lettura, separatore);
-	temp.mis1 = leggi_fino_a(lettura, separatore);
-	temp.mis2 = leggi_fino_a(lettura, separatore);
-	temp.mis3 = leggi_fino_a(lettura, separatore);
-	temp.mis4 = leggi_fino_a(lettura, separatore);
-	temp.mis5 = leggi_fino_a(lettura, separatore);
-	temp.mis6 = leggi_fino_a(lettura, separatore);
-	temp.resto = leggi_fino_a(lettura, '\n');
-	for (int i = 0; temp.resto[i] != '\0'; i++) {
-		if (temp.resto[i] != '?' && temp.resto[i] != separatore) { // se c'è almeno un carattere nel resto che non sia il separatore o ? dice che è una riga da stampare
+	rigaBase.timestamp = leggi_fino_a(lettura, separatore);
+	rigaBase.mis1 = leggi_fino_a(lettura, separatore);
+	rigaBase.mis2 = leggi_fino_a(lettura, separatore);
+	rigaBase.mis3 = leggi_fino_a(lettura, separatore);
+	rigaBase.mis4 = leggi_fino_a(lettura, separatore);
+	rigaBase.mis5 = leggi_fino_a(lettura, separatore);
+	rigaBase.mis6 = leggi_fino_a(lettura, separatore);
+	rigaBase.resto = leggi_fino_a(lettura, '\n');
+
+	//controllo nel "resto" della riga, se c'Ã¨ almeno un carattere utile (non '?') daStampare = 1
+	for (int i = 0; rigaBase.resto[i] != '\0'; i++) {
+		if (rigaBase.resto[i] != '?' && rigaBase.resto[i] != separatore) {
 			daStampare = 1;
 			break;
 		}
 	}
-	if ((temp.mis1[0] != '?' && temp.mis2[0] != '?' && temp.mis3[0] != '?' && temp.mis4[0] != '?' && temp.mis5[0] != '?' && temp.mis6[0] != '?') && daStampare == 1) {
-		daStampare = 1; //controlla che i primi 5 campi siano tutti presenti e nel resto ci sia scritto qualcosa
+
+	//controlla che i primi 5 campi siano tutti utili (senno' non dovrei stampare)
+	if ((rigaBase.mis1[0] != '?' && rigaBase.mis2[0] != '?' && rigaBase.mis3[0] != '?' && rigaBase.mis4[0] != '?' && rigaBase.mis5[0] != '?' && rigaBase.mis6[0] != '?') && daStampare == 1) {
+		daStampare = 1;
 	}
 	else { daStampare = 0; }
-	temp.resto = replaceQuestionMarks(temp.resto); //rimpiazza i ? con -999
-	if (daStampare == 1) { //stampa
-		fprintf(scrittura, "%s%c%s%c%s%c%s%c%s%c%s%c%s\n", temp.timestamp, separatore, temp.mis1, separatore, temp.mis2, separatore, temp.mis3, separatore, temp.mis4, separatore, temp.mis5, separatore, temp.resto);
+
+	//rimpiazza i ? con -999
+	rigaBase.resto = replaceQuestionMarks(rigaBase.resto);
+
+	//stampa la riga salvata
+	if (daStampare == 1) {
+		fprintf(scrittura, "%s%c%s%c%s%c%s%c%s%c%s%c%s%c%s\n", rigaBase.timestamp, separatore, rigaBase.mis1, separatore, rigaBase.mis2, separatore, rigaBase.mis3, separatore, rigaBase.mis4, separatore, rigaBase.mis5, separatore, rigaBase.mis6, separatore, rigaBase.resto);
 	}
 
-	for (int j = 0; j < righe - 1; j++) {	//entra nel loop in cui compara le righe a quella fuori e se diversa la sovrascrive
+	//loop per tutte le righe restanti (tutte tranne la prima che ho preso prima)
+	for (int j = 0; j < righe - 1; j++) {
 		daStampare = 0;
 
-		//prendere tutte le stringhe e metterle nella struttura temporanea
-		temp2.timestamp = leggi_fino_a(lettura, separatore);
-		temp2.mis1 = leggi_fino_a(lettura, separatore);
-		temp2.mis2 = leggi_fino_a(lettura, separatore);
-		temp2.mis3 = leggi_fino_a(lettura, separatore);
-		temp2.mis4 = leggi_fino_a(lettura, separatore);
-		temp2.mis5 = leggi_fino_a(lettura, separatore);
-		temp2.mis6 = leggi_fino_a(lettura, separatore);
-		temp2.resto = leggi_fino_a(lettura, '\n');
-		for (int i = 0; temp2.resto[i] != '\0'; i++) {
-			if (temp2.resto[i] != '?' && temp2.resto[i] != separatore) { // se c'è almeno un carattere nel resto che non sia separatore o ? dice che è una riga da stampare
+		//controllo nel "resto" della riga, se c'Ã¨ almeno un carattere utile (non '?') daStampare = 1
+		rigaNuova.timestamp = leggi_fino_a(lettura, separatore);
+		rigaNuova.mis1 = leggi_fino_a(lettura, separatore);
+		rigaNuova.mis2 = leggi_fino_a(lettura, separatore);
+		rigaNuova.mis3 = leggi_fino_a(lettura, separatore);
+		rigaNuova.mis4 = leggi_fino_a(lettura, separatore);
+		rigaNuova.mis5 = leggi_fino_a(lettura, separatore);
+		rigaNuova.mis6 = leggi_fino_a(lettura, separatore);
+		rigaNuova.resto = leggi_fino_a(lettura, '\n');
+
+		for (int i = 0; rigaNuova.resto[i] != '\0'; i++) {
+			if (rigaNuova.resto[i] != '?' && rigaNuova.resto[i] != separatore) {
 				daStampare = 1;
 				break;
 			}
 		}
-		if ((temp2.mis1[0] != '?' && temp2.mis2[0] != '?' && temp2.mis3[0] != '?' && temp2.mis4[0] != '?' && temp2.mis5[0] != '?' && temp.mis6[0] != '?') && daStampare == 1) {
-			daStampare = 1; //controlla che i primi 5 campi siano tutti presenti e nel resto ci sia scritto qualcosa
+
+		//controlla che i primi 5 campi siano tutti utili (senno' non dovrei stampare)
+		if ((rigaNuova.mis1[0] != '?' && rigaNuova.mis2[0] != '?' && rigaNuova.mis3[0] != '?' && rigaNuova.mis4[0] != '?' && rigaNuova.mis5[0] != '?' && rigaBase.mis6[0] != '?') && daStampare == 1) {
+			daStampare = 1;
 		}
 		else { daStampare = 0; }
-		temp2.resto = replaceQuestionMarks(temp2.resto); //rimpiazza i ? con -999
-		if ((strcmp(temp.timestamp, temp2.timestamp) == 0)) {
+
+		//rimpiazza i ? con -999
+		rigaNuova.resto = replaceQuestionMarks(rigaNuova.resto);
+
+		//se il timestamp della rigaBase == al timestamp della rigaNuova, dice che non e' da stampare, senno' sovrascrive rigaBase e va avanti
+		if ((strcmp(rigaBase.timestamp, rigaNuova.timestamp) == 0)) {
 			daStampare = 0;
 		}
 		else {
-			temp = temp2;
+			rigaBase = rigaNuova;
 		}
-		if (daStampare == 1) { //stampa
-			fprintf(scrittura, "%s%c%s%c%s%c%s%c%s%c%s%c%s\n", temp.timestamp, separatore, temp.mis1, separatore, temp.mis2, separatore, temp.mis3, separatore, temp.mis4, separatore, temp.mis5, separatore, temp.resto);
+		
+		//stampa la riga salvata
+		if (daStampare == 1) {
+			fprintf(scrittura, "%s%c%s%c%s%c%s%c%s%c%s%c%s\n", rigaBase.timestamp, separatore, rigaBase.mis1, separatore, rigaBase.mis2, separatore, rigaBase.mis3, separatore, rigaBase.mis4, separatore, rigaBase.mis5, separatore, rigaBase.resto);
 		}
 	}
 
+	//chiudo e riapro il file per leggere quante righe sono state cambiate per capire se il programma funziona ma anche perche' e' bellino :)
 	fclose(scrittura);
-
 	if ((scrittura = fopen(nomeFileScrittura, "r")) == NULL) {
-		perror("Non è stato possibile leggere il secondo file appena creato.");
+		perror("Non e' stato possibile leggere il secondo file appena creato.");
 		exit(2);
 	}
 	righe -= contaRighe(scrittura) - 1;
 	printf("Righe cancellate: %d\n", righe);
+
+	//chiudo tutti i file aperti e scrivo che tutto e' andato a buon fine
 	fclose(scrittura);
 	fclose(lettura);
-
 	scanf("%*c");
 	printf("COMPLETATO! (premere invio per uscire)");
 	scanf("%*c");
