@@ -13,7 +13,7 @@
 //a volte file .csv (separatore ;) a volte .txt (separatore \t) a volte .asv (separatore ;)
 
 typedef struct {
-	char* timestamp, *mis1, *mis2, *mis3, *mis4, *mis5, *mis6, *resto;
+	char* timestamp, *mis1, *mis2, *mis3, *mis4, *mis5, *resto;
 } Riga;
 
 char* leggi_fino_a(FILE* file, char carattere); //legge fino ad un determinato carattere e lo mette in una stringa dinamicamente allocata
@@ -96,7 +96,6 @@ int main() {
 	rigaBase.mis3 = leggi_fino_a(lettura, separatore);
 	rigaBase.mis4 = leggi_fino_a(lettura, separatore);
 	rigaBase.mis5 = leggi_fino_a(lettura, separatore);
-	rigaBase.mis6 = leggi_fino_a(lettura, separatore);
 	rigaBase.resto = leggi_fino_a(lettura, '\n');
 
 	//controllo nel "resto" della riga, se c'è almeno un carattere utile (non '?') daStampare = 1
@@ -108,7 +107,7 @@ int main() {
 	}
 
 	//controlla che i primi 5 campi siano tutti utili (senno' non dovrei stampare)
-	if ((rigaBase.mis1[0] != '?' && rigaBase.mis2[0] != '?' && rigaBase.mis3[0] != '?' && rigaBase.mis4[0] != '?' && rigaBase.mis5[0] != '?' && rigaBase.mis6[0] != '?') && daStampare == 1) {
+	if ((rigaBase.mis1[0] != '?' && rigaBase.mis2[0] != '?' && rigaBase.mis3[0] != '?' && rigaBase.mis4[0] != '?' && rigaBase.mis5[0] != '?') && daStampare == 1) {
 		daStampare = 1;
 	}
 	else { daStampare = 0; }
@@ -118,7 +117,7 @@ int main() {
 
 	//stampa la riga salvata
 	if (daStampare == 1) {
-		fprintf(scrittura, "%s%c%s%c%s%c%s%c%s%c%s%c%s%c%s\n", rigaBase.timestamp, separatore, rigaBase.mis1, separatore, rigaBase.mis2, separatore, rigaBase.mis3, separatore, rigaBase.mis4, separatore, rigaBase.mis5, separatore, rigaBase.mis6, separatore, rigaBase.resto);
+		fprintf(scrittura, "%s%c%s%c%s%c%s%c%s%c%s%c%s\n", rigaBase.timestamp, separatore, rigaBase.mis1, separatore, rigaBase.mis2, separatore, rigaBase.mis3, separatore, rigaBase.mis4, separatore, rigaBase.mis5, separatore, rigaBase.resto);
 	}
 
 	//loop per tutte le righe restanti (tutte tranne la prima che ho preso prima)
@@ -132,7 +131,6 @@ int main() {
 		rigaNuova.mis3 = leggi_fino_a(lettura, separatore);
 		rigaNuova.mis4 = leggi_fino_a(lettura, separatore);
 		rigaNuova.mis5 = leggi_fino_a(lettura, separatore);
-		rigaNuova.mis6 = leggi_fino_a(lettura, separatore);
 		rigaNuova.resto = leggi_fino_a(lettura, '\n');
 
 		for (int i = 0; rigaNuova.resto[i] != '\0'; i++) {
@@ -143,7 +141,7 @@ int main() {
 		}
 
 		//controlla che i primi 5 campi siano tutti utili (senno' non dovrei stampare)
-		if ((rigaNuova.mis1[0] != '?' && rigaNuova.mis2[0] != '?' && rigaNuova.mis3[0] != '?' && rigaNuova.mis4[0] != '?' && rigaNuova.mis5[0] != '?' && rigaBase.mis6[0] != '?') && daStampare == 1) {
+		if ((rigaNuova.mis1[0] != '?' && rigaNuova.mis2[0] != '?' && rigaNuova.mis3[0] != '?' && rigaNuova.mis4[0] != '?' && rigaNuova.mis5[0] != '?') && daStampare == 1) {
 			daStampare = 1;
 		}
 		else { daStampare = 0; }
