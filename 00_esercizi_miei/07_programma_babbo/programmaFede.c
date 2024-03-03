@@ -66,7 +66,7 @@ int main() {
 	scanf("%d%d", &righePrima, &righeDopo);
 
 	//conta le righe per capire quanto fare lungo il loop
-	int righe = contaRighe(lettura) - 5;
+	int righe = contaRighe(lettura) - 1 - righePrima - righeDopo;
 
 	for (int i = 0; i < righePrima; i++) {
 		while (1) {
@@ -172,7 +172,7 @@ int main() {
 		exit(2);
 	}
 	righe -= contaRighe(scrittura) - 1;
-	printf("Righe cancellate: %d\n", righe);
+	printf("Righe cancellate (comprese quelle iniziali): %d\n", righe);
 
 	//chiudo tutti i file aperti e scrivo che tutto e' andato a buon fine
 	fclose(scrittura);
